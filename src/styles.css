@@ -13,22 +13,22 @@ html{
     height: 100%;
 }
 
-#InpGrid1{
+.InpGrid1{
     background-color: #db4d65;
 }
 
-#InpGrid2{
+.InpGrid2{
     background-color: #5aa633;
 }
 
-#InpGrid3{
+.InpGrid3{
     background-color: #fcbf23;
 }
 
-#InpGrid4{
+.InpGrid4{
     background-color: #2397fc;
 }
 
-#InpGrid5{
+.InpGrid5{
     background-color: #ba43fa;
 }
