@@ -21,7 +21,33 @@ function createGrids(){
     div.style.alignItems = "center"
     div.style.flexDirection = "column"    
     div.id = "grid"+gridnumb.toString()
+    
+    
+    
+    switch(gridnumb){
+        case 6:
+        case 31:
+            div.classList.add("InpGrid1")
+            break
+        case 12:
+        case 32:
+            div.classList.add("InpGrid2")
+            break
+        case 18:
+        case 33:
+            div.classList.add("InpGrid3")
+            break
+        case 24:
+        case 34:
+            div.classList.add("InpGrid4")
+            break
+        case 30:
+        case 35:
+            div.classList.add("InpGrid5")
+            break
+    }
     gridnumb++
+    div.classList.add("Cards")
     return div
 }
 
@@ -37,28 +63,7 @@ function createInput (type /* String */){
 for(let rows = 1; rows <= 6; rows++){
     for(let columns = 1; columns <= 6; columns++){
         if(columns != 6 || rows != 6){
-            div = createGrids()
-
-            /// Grid colors.
-            if((columns + rows)%2 == 0 && columns < 6 && rows < 6){
-                    div.style.background = "#38703a"
-            }else if((columns + rows)%2 == 1 && columns < 6 && rows < 6){
-                    div.style.background  = "#4bc44f"
-            }else{
-                if(rows == 1 || columns == 1){
-                    div.classList.add("InpGrid1")
-                }else if(rows == 2 || columns == 2){
-                    div.classList.add("InpGrid2")
-                }else if(rows == 3 || columns == 3){
-                    div.classList.add("InpGrid3")
-                }else if(rows == 4 || columns == 4){
-                    div.classList.add("InpGrid4")
-                }else if(rows == 5 || columns == "5"){
-                    div.classList.add("InpGrid5")
-                }
-            }
-            
-            
+            div = createGrids()            
             if (columns == 6 || rows == 6){
                 for(let i = 1; i <= 2; i++){
                     divinput = document.createElement("div")

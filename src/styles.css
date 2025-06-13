@@ -13,6 +13,14 @@ html{
     height: 100%;
 }
 
+.Even{
+    background-color: #38703a;
+}
+
+.Odd{
+    background-color: #4bc44f;
+}
+
 .InpGrid1{
     background-color: #db4d65;
 }
