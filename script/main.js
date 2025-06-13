@@ -1,6 +1,7 @@
 vFlipGrid = document.getElementById("vltflipgrid")
 
 var inpnumb = 1
+var gridnumb = 1
 
 function createImage (src /* String */, width /* String */, height /* String */){
     let img = document.createElement("img") 
@@ -19,10 +20,12 @@ function createGrids(){
     div.style.justifyContent = "center"
     div.style.alignItems = "center"
     div.style.flexDirection = "column"    
+    div.id = "grid"+gridnumb.toString()
+    gridnumb++
     return div
 }
 
-function createInput (type /* String */, id){
+function createInput (type /* String */){
     inp = document.createElement("input")
     inp.type = type
     inp.style.width = "inherit"
@@ -44,19 +47,14 @@ for(let rows = 1; rows <= 6; rows++){
             }else{
                 if(rows == 1 || columns == 1){
                     div.classList.add("InpGrid1")
-                    div.style.background = "#db4d65"
                 }else if(rows == 2 || columns == 2){
                     div.classList.add("InpGrid2")
-                    div.style.background = "#5aa633"
                 }else if(rows == 3 || columns == 3){
                     div.classList.add("InpGrid3")
-                    div.style.background = "#fcbf23"
                 }else if(rows == 4 || columns == 4){
                     div.classList.add("InpGrid4")
-                    div.style.background = "#2397fc"
                 }else if(rows == 5 || columns == "5"){
                     div.classList.add("InpGrid5")
-                    div.style.background = "#ba43fa"
                 }
             }
             
