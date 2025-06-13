@@ -14,11 +14,23 @@ for(let rows = 1; rows <= 6; rows++){
             div.style.flexDirection = "column"
 
 
-            if((columns + rows)%2 == 0){
-                div.style.backgroundColor = "red"
-            }else{
-                div.style.backgroundColor  = "pink"
-            }
+                if((columns + rows)%2 == 0 && columns < 6 && rows < 6){
+                    div.style.background = "#38703a"
+                }else if((columns + rows)%2 == 1 && columns < 6 && rows < 6){
+                    div.style.background  = "#4bc44f"
+        }else{
+                if(rows == 1 || columns == 1){
+                    div.style.background = "#db4d65"
+                }else if(rows == 2 || columns == 2){
+                    div.style.background = "#5aa633"
+                }else if(rows == 3 || columns == 3){
+                    div.style.background = "#fcbf23"
+                }else if(rows == 4 || columns == 4){
+                    div.style.background = "#2397fc"
+                }else if(rows == 5 || columns == "5"){
+                    div.style.background = "#ba43fa"
+                }
+        }
             
             
             if (columns == 6 || rows == 6){
@@ -63,5 +75,7 @@ for(let rows = 1; rows <= 6; rows++){
             vFlipGrid.appendChild(div)
         }
     }
+
+
     
 }
