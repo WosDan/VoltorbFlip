@@ -1,36 +1,64 @@
 vFlipGrid = document.getElementById("vltflipgrid")
 
+var inpnumb = 1
+
+function createImage (src /* String */, width /* String */, height /* String */){
+    let img = document.createElement("img") 
+    img.src = src
+    img.style.width = width
+    img.style.height = height
+    return img
+}
+
+function createGrids(){
+    div = document.createElement("div")
+    div.style.border = "1px solid"
+    div.style.borderColor = "black"
+    div.style.padding = "10px"
+    div.style.display = "flex"
+    div.style.justifyContent = "center"
+    div.style.alignItems = "center"
+    div.style.flexDirection = "column"    
+    return div
+}
+
+function createInput (type /* String */, id){
+    inp = document.createElement("input")
+    inp.type = type
+    inp.style.width = "inherit"
+    inp.id = "input"+inpnumb.toString()
+    inpnumb++
+    return inp
+}
 
 for(let rows = 1; rows <= 6; rows++){
     for(let columns = 1; columns <= 6; columns++){
         if(columns != 6 || rows != 6){
-            div = document.createElement("div")
-            div.style.border = "1px solid"
-            div.style.borderColor = "black"
-            div.style.padding = "10px"
-            div.style.display = "flex"
-            div.style.justifyContent = "center"
-            div.style.alignItems = "center"
-            div.style.flexDirection = "column"
+            div = createGrids()
 
-
-                if((columns + rows)%2 == 0 && columns < 6 && rows < 6){
+            /// Grid colors.
+            if((columns + rows)%2 == 0 && columns < 6 && rows < 6){
                     div.style.background = "#38703a"
-                }else if((columns + rows)%2 == 1 && columns < 6 && rows < 6){
+            }else if((columns + rows)%2 == 1 && columns < 6 && rows < 6){
                     div.style.background  = "#4bc44f"
-        }else{
+            }else{
                 if(rows == 1 || columns == 1){
+                    div.classList.add("InpGrid1")
                     div.style.background = "#db4d65"
                 }else if(rows == 2 || columns == 2){
+                    div.classList.add("InpGrid2")
                     div.style.background = "#5aa633"
                 }else if(rows == 3 || columns == 3){
+                    div.classList.add("InpGrid3")
                     div.style.background = "#fcbf23"
                 }else if(rows == 4 || columns == 4){
+                    div.classList.add("InpGrid4")
                     div.style.background = "#2397fc"
                 }else if(rows == 5 || columns == "5"){
+                    div.classList.add("InpGrid5")
                     div.style.background = "#ba43fa"
                 }
-        }
+            }
             
             
             if (columns == 6 || rows == 6){
@@ -39,20 +67,14 @@ for(let rows = 1; rows <= 6; rows++){
                     divinput.style.width = "inherit"
                     divinput.style.display = "flex"
                     divinput.flexDirection = "row"
-                    inputs = document.createElement("input")
-                    inputs.type = "number"
-                    inputs.style.width = "inherit"
+                    inputs = createInput("number")
 
                     if (rows == 6){
                         inputs.style.width = "60px"
                     }
 
                     if(i == 2){
-                        voltorb = document.createElement("img")
-                        voltorb.src = "src/images/voltorb.ico"
-                        voltorb.style.width = "20px"
-                        voltorb.style.height = "20px"
-                        divinput.appendChild(voltorb)
+                        divinput.appendChild(createImage("src/images/voltorb.ico", "20px", "20px"))
                         inputs.style.width = "40px"
                         if(columns == 6){
                             inputs.style.width = "30px"
