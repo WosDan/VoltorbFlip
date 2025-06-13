@@ -1,0 +1,14 @@
+body{
+    background-color: rgb(60, 66, 61);
+}
+
+#holder{
+    height: 1000px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+html{
+    height: 100%;
+}
