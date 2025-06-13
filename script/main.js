@@ -22,7 +22,11 @@ function createGrids(){
     div.style.flexDirection = "column"    
     div.id = "grid"+gridnumb.toString()
     
-    
+    if((gridnumb%2==0 && gridnumb < 6)||(gridnumb%2 == 1 && gridnumb < 12 && gridnumb > 6)||(gridnumb%2 == 0 && gridnumb < 18 && gridnumb > 12)||(gridnumb%2 == 1 && gridnumb < 24 && gridnumb > 18)||(gridnumb%2 == 0 && gridnumb < 30 && gridnumb > 24)){
+        div.classList.add("Even")
+    }else if((gridnumb%2==1 && gridnumb < 6)||(gridnumb%2 == 0 && gridnumb < 12 && gridnumb > 6)||(gridnumb%2 == 1 && gridnumb < 18 && gridnumb > 12)||(gridnumb%2 == 0 && gridnumb < 24 && gridnumb > 18)||(gridnumb%2 == 1 && gridnumb < 30 && gridnumb > 24)){
+        div.classList.add("Odd")
+    }    
     
     switch(gridnumb){
         case 6:
