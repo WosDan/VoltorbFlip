@@ -6,6 +6,21 @@
 
     let vFlipGrid = document.getElementById("vltflipgrid")
 
+    let gthlogo = document.getElementById("gthlogo")
+
+    let btproject = document.getElementById("btproject")
+
+    let directSourceCode = () => window.open("https://github.com/WosDan/VoltorbFlip", "_blank")
+
+    let gthHoverImage = ( ) => gthlogo.src = "./src/images/github-mark/github-mark-white.svg"
+
+    let gthNormalImage = () => gthlogo.src = "./src/images/github-mark/github-mark.svg"
+
+    btproject.addEventListener('click', directSourceCode)
+    btproject.addEventListener('mouseover', gthHoverImage)
+    btproject.addEventListener('mouseleave', gthNormalImage)
+    
+
     for(let rows = 1; rows <= 6; rows++){
         for(let columns = 1; columns <= 6; columns++){
             if(columns == 6 && rows == 6){
