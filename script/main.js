@@ -4,6 +4,8 @@
 
     import {createInput, resetInpNumb} from './createInput.js'
 
+    import {Alert} from './alert.js'
+
     let vFlipGrid = document.getElementById("vltflipgrid")
 
     let gthlogo = document.getElementById("gthlogo")
@@ -49,6 +51,7 @@
                         let inputs = createInput("number", "Input")
                         
                         if(i == 1){
+                            inputs.classList.add("PointInput")
                             if(columns){
                                 inputs.classList.add("CInput")
                                 divinput.classList.add("CDivInput")
@@ -59,7 +62,8 @@
                         }
 
                         if(i == 2){
-                            divinput.appendChild(createImage("src/images/voltorb.ico", "20px", "20px"))
+                            divinput.appendChild(createImage("src/images/voltorb.ico", "voltorb"))
+                            inputs.classList.add("BombInput")
                             if(columns){
                                 inputs.classList.add("CInput2")
                                 divinput.classList.add("CDivInput2")
@@ -73,3 +77,16 @@
                         div.appendChild(divinput)
                     }
     }
+
+document.querySelectorAll('.BombInput').forEach((element)=>{
+    element.max = "5"
+    element.min = "0"
+})
+
+document.querySelectorAll('.PointInput').forEach((element)=>{
+    element.max = "15"
+    element.min = "0"
+})
+
+Alert()
+window.addEventListener('resize', Alert)

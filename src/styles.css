@@ -6,47 +6,73 @@
 body{
     /* background-color: rgb(60, 66, 61); */
     background-color: rgb(121, 36, 36);
-    overflow: hidden;
+    /* overflow: hidden; */
+    overflow-x: hidden;
+    overflow-y: auto;
+    scrollbar-width: none;
+    scrollbar-color: transparent;
+    -ms-overflow-style: none;
     display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
     background-image: url(./images/wallpaperbody.svg);
+    width: 100%;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+    width: 0;
+    height: 0;
+    background: transparent;
 }
 
 
+#bdleft{
+    width: 25vw;
+    height: 100vh;
+}
+
+#bdright{
+    width: 25vw;
+    height: 100%;
+}
 
 h1{
     font-family: 'Pokemon Solid';
-    font-size: 80px;
-    height: 150px;
-    box-sizing: content-box;
+    font-size: 10vh;
+    height: 9rem;
+    width: 800px;
+    line-height: 7vh;
+    display: flex;
+    justify-content: center;
     color: white; /*rgb(248, 255, 54)*/
     letter-spacing: 5px;
     -webkit-text-stroke: 1.5px rgb(46, 0, 0); /*rgb(25, 66, 215)*/ /*rgb(200, 27, 27)*/
+    margin: 5px;
 }
 
 #holder{
-    height: 640px;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    flex-direction: column;
+    width: 50rem;
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 15vh 66vh 12vh 14vh; /*6.5rem 33rem 6rem 7rem*/ /*6.5rem 32rem 6rem 7rem;*/
 }
 
 #object{
-    width: 500px;
-    height: 500px;
-    margin-bottom: 10px;
+    margin: auto;
+    width: 52vh;
+    height: 52vh;
     background: rgb(50, 50, 50); /*rgb(60, 66, 61);*/
     background-image: url(./images/wallpaper.webp);
     background-size: 200px;
-    border: 2px black solid;
+    border: 3.5px black solid;
     display: flex;
-    justify-content: center;
-    padding-right: 10px;
-    padding-top: 30px;
+    flex-direction: column;
     border-radius: 50px;
-    padding-bottom: 27px;
+    justify-content: center;
+    align-items: center;
+    padding: 6vh;
 }
 
 html{
@@ -117,20 +143,17 @@ html{
 }
 
 .CDivInput2{
-    width: 23px;
+    width: 100%;
 }
 
 .RDivInput2{
-    width: 30px;
+    width: 100%;
 }
 
 .cifgd{
-    width: 50px;
 }
 
 .rifgd{
-    width: inherit;
-    height: 40px;
 }
 
 .InpGrid1{
@@ -161,28 +184,34 @@ html{
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    margin: 5px; /* Default 0px */
+    margin: 0.2rem; /* Default 0px */
+    
 }
 
 #vltflipgrid{
     display: grid; 
-    grid-template-columns: 80px 80px 80px 80px 80px 60px;grid-template-rows: 80px 80px 80px 80px 80px 60px;
+    grid-template-columns: 10vh 10vh 10vh 10vh 10vh 8.5vh; /*4.5rem 4.5rem 4.5rem 4.5rem 4.5rem 3.375rem*/
+    grid-template-rows: 10vh 10vh 10vh 10vh 10vh 8.5vh;
+    height: 59vh;
+    width: 59vh;
 }
 
 #btproject{
-    margin-top: 5px;
     display: flex;
     flex-direction: row;
-    background-color: rgb(121, 36, 36);
-    width: 270px;
+    background-color: rgb(255, 255, 255);/**rgb(121, 36, 36)**/
+    height: 5rem;
+    width: 17rem;
     border: rgb(36, 35, 35) solid 3px;
     color: rgb(36, 35, 35);
     border-radius: 15px;
+    transition: all 0.2s ease;
 }
 
 #btproject:hover {
-    border: rgb(214, 211, 211) solid 3px;
-    color: rgb(214, 211, 211);
+    background-color: rgb(30, 30, 30);
+    border: rgb(255, 255, 255) solid 2px;
+    color: rgb(255, 255, 255);
     transform: scale(1.05);
     transition: all 0.2s ease;
 }
@@ -190,8 +219,8 @@ html{
 #gthlogo{
     margin: 8px;
     margin-left: 12px;
-    width: 50px;
-    height: 50px;
+    width: 7vh;
+    height: 7vh;
 }
 
 #srccode{
@@ -199,7 +228,32 @@ html{
     font-family: "Ubuntu";
     color: inherit;
     flex-direction: column;
-    font-size: 30px;
+    font-size: 3.5vh;
     justify-content: center;
     margin-left: 10px;
+}
+
+#srcflex{
+    display: flex;
+    columns: center;
+    justify-content: center;
+    align-items: center;
+}
+
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Ubuntu';
+}
+
+#author{
+    font-size: 0.8rem;
+    margin: 1rem;
+    align-self: flex-end;
+}
+
+.voltorb{
+    width: 20px;
+    height: 20px;
 }

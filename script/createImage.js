@@ -1,8 +1,7 @@
-function createImage (src /* String */, width /* String */, height /* String */){
+function createImage (src /* String */, className){
     let img = document.createElement("img") 
     img.src = src
-    img.style.width = width
-    img.style.height = height
+    img.classList.add(className)
     return img
 }
 

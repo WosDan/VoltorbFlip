@@ -6,10 +6,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="src/styles.css">
+    <!-- <link rel="stylesheet" href="src/" media="(max-width: 599px)">
+    <link rel="stylesheet" href="src/" media="(min-width: 600px) and (max-width: 1023px)"> -->
+    <link rel="stylesheet" href="src/styles.css" media="(min-width: 1024px)">
     <title>VoltorbFlipSolver</title>
 </head>
 <body>
+    <div id="bdleft">.</div>
     <div id="holder">
         <h1>Voltorb Flip</h1>
         <div id="object">
@@ -17,15 +20,23 @@
         id="vltflipgrid">
         </div>  
         </div>  
-        <span id="btproject">
-            <span>
-                <img  id="gthlogo" src="./src/images/github-mark/github-mark.svg" alt="github-mark">
-            </span>    
-            <span id="srccode"> 
-                Source Code
-            </span>    
-        </span> 
+        <span id="srcflex">
+            <span id="btproject">
+                <span>
+                    <img  id="gthlogo" src="./src/images/github-mark/github-mark.svg" alt="github-mark">
+                </span>    
+                <span id="srccode"> 
+                    Source Code
+                </span>    
+            </span> 
+        </span>
+        <footer>
+            <span id="author">
+                By WisDan / WosDan / Daniel Rincón
+            </span>
+        </footer>
     </div>
-    <script src="script/main.js" type="module"></script>     
+    <script src="script/main.js" type="module"></script> 
+    <div id="bdright">.</div>    
 </body>
 </html>
