@@ -78,15 +78,15 @@
                     }
     }
 
-// document.querySelectorAll('.BombInput').forEach((element)=>{
-//     element.max = "5"
-//     element.min = "0"
-// })
+document.querySelectorAll('.BombInput').forEach((element)=>{
+    element.max = "5"
+    element.min = "0"
+})
 
-// document.querySelectorAll('.PointInput').forEach((element)=>{
-//     element.max = "15"
-//     element.min = "0"
-// })
+document.querySelectorAll('.PointInput').forEach((element)=>{
+    element.max = "15"
+    element.min = "0"
+})
 
 // Alert()
 // window.addEventListener('resize', Alert)

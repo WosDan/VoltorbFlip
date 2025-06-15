@@ -24,8 +24,7 @@
 body{
     /* background-color: rgb(60, 66, 61); */
     background-color: rgb(121, 36, 36);
-    /* overflow: hidden; */
-    overflow-x: auto;
+    overflow-x: hidden;
     overflow-y: auto;
     scrollbar-width: none;
     scrollbar-color: transparent;
