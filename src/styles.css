@@ -56,7 +56,7 @@ h1{
     width: 50rem;
     height: 100vh;
     display: grid;
-    grid-template-rows: 15vh 66vh 12vh 14vh; /*6.5rem 33rem 6rem 7rem*/ /*6.5rem 32rem 6rem 7rem;*/
+    grid-template-rows: 15vh 66vh 12vh 14vh; /*6.5rem 33rem 6rem 7rem*/ /*6.5rem 32rem 6vw 7vw;*/
 }
 
 #object{
@@ -200,12 +200,13 @@ html{
     display: flex;
     flex-direction: row;
     background-color: rgb(255, 255, 255);/**rgb(121, 36, 36)**/
-    height: 5rem;
+    height: 5vw;
     width: 17rem;
     border: rgb(36, 35, 35) solid 3px;
     color: rgb(36, 35, 35);
     border-radius: 15px;
     transition: all 0.2s ease;
+    margin-top: 0.5cm;
 }
 
 #btproject:hover {
@@ -241,6 +242,7 @@ html{
 }
 
 footer{
+    margin-top: 5vw;
     display: flex;
     align-items: center;
     justify-content: center;

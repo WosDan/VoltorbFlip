@@ -3,22 +3,26 @@ function Alert(){
 
     
     function getWindowAspectRatio() {
-        const width = window.innerWidth;
-        const height = window.innerHeight;
+        const width = document.documentElement.clientWidth;
+        const height = document.documentElement.clientHeight;
         return width / height;
+        
     }
 
-    if(parseFloat(window.innerWidth) <= 1024 
-    && !(getWindowAspectRatio() >= 1.7 
-    && getWindowAspectRatio() <= 2.5)){
+    if (
+    (window.screen.orientation.type === "portrait-primary" 
+    || window.screen.orientation.type === "portrait-secondary") 
+    || !(getWindowAspectRatio() >= 1.4 && getWindowAspectRatio() <= 2.5)
+    ) {
+
         if(!div){
             let div = document.createElement('div');
             div.style.fontFamily = 'Ubuntu';
             div.style.backgroundColor = 'rgb(255, 255, 255)';
             div.style.paddingRight = '3vh';
             div.style.fontSize = '4vh';
-            div.style.width = '100vw';
-            div.style.height = '100vh';
+            div.style.width = '100%';
+            div.style.height = '100%';
             div.id = 'alert';
             div.style.position = 'fixed';
             div.style.top = '0';
@@ -43,6 +47,10 @@ function Alert(){
             div.remove()
         }   
     }
+    console.log("Width:", document.documentElement.clientWidth);
+    console.log("Height:", document.documentElement.clientHeight);
+    console.log("Aspect Ratio:", document.documentElement.clientWidth / document.documentElement.clientHeight);
+    console.log("Orientation:", window.screen.orientation.type);
 }
 
 export {Alert}
