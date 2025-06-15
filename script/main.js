@@ -10,7 +10,7 @@
 
     let gthlogo = document.getElementById("gthlogo")
 
-    let btproject = document.getElementById("btproject")
+    let btproject = document.getElementById("btproject")    
 
     let directSourceCode = () => window.open("https://github.com/WosDan/VoltorbFlip", "_blank")
 
