@@ -1,5 +1,13 @@
 function Alert(){
     let div = document.getElementById('alert')
+
+    
+    function getWindowAspectRatio() {
+        const width = window.innerWidth;
+        const height = window.innerHeight;
+        return width / height;
+    }
+
     if(parseFloat(window.innerWidth) <= 1024 
     || (getWindowAspectRatio() >= 1.7 
     && getWindowAspectRatio() <= 2.5)){
@@ -35,12 +43,6 @@ function Alert(){
             div.remove()
         }   
     }
-}
-
-function getWindowAspectRatio() {
-    const width = window.innerWidth;
-    const height = window.innerHeight;
-    return width / height;
 }
 
 export {Alert}
