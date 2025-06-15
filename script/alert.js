@@ -9,7 +9,7 @@ function Alert(){
     }
 
     if(parseFloat(window.innerWidth) <= 1024 
-    || (getWindowAspectRatio() >= 1.7 
+    && !(getWindowAspectRatio() >= 1.7 
     && getWindowAspectRatio() <= 2.5)){
         if(!div){
             let div = document.createElement('div');
