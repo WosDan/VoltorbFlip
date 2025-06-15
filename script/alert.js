@@ -1,6 +1,6 @@
 function Alert(){
     let div = document.getElementById('alert')
-    if(parseFloat(window.innerWidth) <= 1024){
+    if(parseFloat(window.innerWidth) <= 1024 || (getWindowAspectRatio() >= 1.7 && getWindowAspectRatio() <= 2.2)){
         if(!div){
             let div = document.createElement('div');
             div.style.fontFamily = 'Ubuntu';
@@ -33,6 +33,12 @@ function Alert(){
             div.remove()
         }   
     }
+}
+
+function getWindowAspectRatio() {
+    const width = window.innerWidth;
+    const height = window.innerHeight;
+    return width / height;
 }
 
 export {Alert}
