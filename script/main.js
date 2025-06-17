@@ -28,17 +28,21 @@
             if(columns == 6 && rows == 6){
                 continue
             }
-                let div = createGrids()            
+                let div = createGrids()
+                let sdiv = document.createElement('div')           
                 if (columns == 6 || rows == 6){
-                    createButtons(div, columns == 6) 
+                    createButtons(sdiv, columns == 6) 
                 }
 
+                sdiv.classList.add('SDiv')
+                
                 if (columns == 6){
                     div.classList.add("cifgd")
                 }else if(rows == 6){
                     div.classList.add("rifgd")
                 }
 
+                div.appendChild(sdiv)
                 vFlipGrid.appendChild(div)
             
         }
