@@ -160,6 +160,12 @@ h1{
 }
 }
 
+.voltorb{
+    width: 2vh;
+    height: 2vh;
+}
+
+
 .Input{
     max-width: auto;
     max-height: 1.5vw;
