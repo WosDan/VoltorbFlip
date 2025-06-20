@@ -70,6 +70,7 @@ header{
 .Input{
     max-width: auto;
     max-height: 1vh;
+    font-size: 1.2vh;
 }
 
 #object{
@@ -169,6 +170,7 @@ h1{
 .Input{
     max-width: auto;
     max-height: 1.5vw;
+    font-size: 1.2vw;
 }
 
 #object{
