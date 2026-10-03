@@ -1,0 +1,11 @@
+@import "tailwindcss";
+
+@font-face{
+    font-family: 'Pokemon Solid';
+    src: url('../src/fonts/Pokemon\ Solid.woff2') format('woff2');
+}
+
+@theme{
+    --font-pokemon: 'Pokemon Solid', sans-serif;
+}
+
