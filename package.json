@@ -1,0 +1,25 @@
+{
+  "name": "voltorbflip",
+  "version": "1.0.0",
+  "description": "The idea of this repository is redoing the old code of my VoltorbFlip-Legacy solver, in order to make it responsive, easier to understand, and fully functional.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WosDan/VoltorbFlip.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/WosDan/VoltorbFlip/issues"
+  },
+  "homepage": "https://github.com/WosDan/VoltorbFlip#readme",
+  "dependencies": {
+    "@tailwindcss/cli": "^4.3.3",
+    "tailwindcss": "^4.3.3"
+  }
+}
