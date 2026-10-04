@@ -20,23 +20,32 @@
 
 <body>
     <main
-        class="min-h-screen w-full bg-[#792424] bg-[url('../src/images/main_wallpaper.svg')] bg-cover bg-center flex flex-col items-center justify-start pt-5 xl:pt-0 gap-4 md:gap-6 xl:gap-8">
+        class="min-h-screen w-ful bg-zinc-900 flex flex-col items-center justify-center pt-5 pb-8 xl:pt-0 gap-4 md:gap-6 xl:gap-6">
+        //xl:bg-[radial-gradient(ellipse_at_center,#722343_0%,#48182D_35%,#21121F_70%,#0F090D_100%)]
+        
         <h1
-            class="font-pokemon text-center text-5xl md:text-7xl lg:text-8xl text-white tracking-wider leading-relaxed pb-3 pl-2 md:pb-5 lg:pb-7 m-0 [-webkit-text-stroke:2px_#000000] md:[-webkit-text-stroke:3px_#000000] lg:[-webkit-text-stroke:4px_#000000]">
+            class="font-sans font-extrabold text-center text-5xl md:text-8xl lg:text-8xl text-white tracking-wider leading-relaxed m-0 [-webkit-text-stroke:2px_#000000] md:[-webkit-text-stroke:3px_#000000] lg:[-webkit-text-stroke:4px_#000000]">
             Voltorb Flip
         </h1>
 
 
         <div
-            class="h-80 w-80 md:w-150 md:h-150 lg:w-210 lg:h-210 xl:w-160 xl:h-160 border-3 xl:border-4 p-5 lg:p-8 border-black rounded-4xl bg-[#323232] bg-[url('../src/images/table_wallpaper.webp')] bg-contain">
-
-            <div id="game-board" class="grid grid-cols-6 gap-1 md:gap-2 aspect-square w-full">
-
-            </div>
+            class=" h-80 w-80 mb-5.5 md:w-150 md:h-150 lg:w-210 lg:h-210 xl:w-160 xl:h-160 border-3 xl:border-4 p-5 lg:p-8 border-black rounded-4xl bg-[#323232] bg-[url('../src/images/table_wallpaper.webp')] bg-contain">
+        
+            <div id="game-board" class="grid grid-cols-6 gap-1 md:gap-2 aspect-square w-full"></div>
 
         </div>
 
+        <div class="flex gap-3 pt-2 border-t border-white/5">
+            <button class="flex-1 bg-zinc-800 text-zinc-300 font-sans font-bold py-2.5 px-4 rounded-xl text-sm transition-all border border-white/5 active:scale-95 hover:bg-[rgb(141,141,141)] hover:border-[rgb(255,255,255)] hover:shadow-[0_0_8px_rgba(255,255,255,0.4)] hover:scale-105">
+                Resetear
+            </button>
+            <button class="flex-1 bg-rose-600/90 border border-white/80 text-white font-medium py-2.5 px-4 rounded-xl text-sm transition-all shadow-lg shadow-rose-900/20 active:scale-95 hover:bg-[rgb(131,4,74)] hover:border-[rgb(255,179,217)] hover:shadow-[0_0_8px_rgba(255,255,255,0.4)] hover:scale-105">
+                Resolver
+            </button>
+        </div>
     </main>
-</body>
 
+    <script type="module" src="./src/js/main.js"></script>
+</body>
 </html>
